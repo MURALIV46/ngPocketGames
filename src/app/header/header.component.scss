@@ -1,0 +1,113 @@
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    background: #222;
+    
+    .profile-pic{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color:#FBB040;
+      font-weight: bold;
+      font-family: 'PIXELYA Trial', sans-serif;
+    }
+  
+    .right-section {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      .nav {
+        display: flex;
+        gap: 20px;
+  
+        a {
+          text-decoration: none;
+          color: #333;
+          font-weight: 500;
+          color:#FBB040;
+          font-family: 'PIXELYA Trial', sans-serif;
+          border: none;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+  
+      .user-menu {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color:#FBB040;
+        // img {
+        //   width: 24px;
+        //   height: 24px;
+        // }
+        p i:hover{
+            color: white;
+        }
+        .hamburger {
+          font-size: 24px;
+          background: none;
+          border: none;
+          cursor: pointer;
+          display: none;
+          color:#FBB040;
+        }
+      }
+    }
+  }
+  
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 12px 24px;
+    border-top: 1px solid #ddd;
+  
+    a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 0;
+    }
+  
+    &.show {
+      display: flex;
+    }
+  }
+  
+  // Responsive Styles
+  @media (max-width: 768px) {
+    .header {
+      .right-section {
+        .nav {
+          display: none;
+        }
+  
+        .user-menu {
+          .hamburger {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  

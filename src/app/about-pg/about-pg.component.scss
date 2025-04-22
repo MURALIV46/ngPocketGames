@@ -1,0 +1,34 @@
+// section,strong,h2,h3,p,li,ul,em{
+//   background: #3b9096;
+// }
+
+.about-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    // background-color: #fafafa;
+    border-radius: 10px;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+  }
+  
+  .about-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-container h3 {
+    margin-top: 2rem;
+    color: #007bff;
+  }
+  
+  .about-container p, .about-container li {
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  .about-container ul {
+    padding-left: 1.5rem;
+  }
+  
