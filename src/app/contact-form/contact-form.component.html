@@ -1,37 +1,40 @@
 <!-- suggestion-form.component.html -->
-<form [formGroup]="suggestionForm" (ngSubmit)="onSubmit()" class="form-container">
-    <h2>Send Us Your Suggestion</h2>
-  
-    <label>
-      Name
-      <input formControlName="name" type="text" placeholder="Your name" />
-    </label>
-  
-    <label>
-      Email
-      <input formControlName="email" type="email" placeholder="you@example.com" />
-    </label>
-  
-    <label>
-      Category
-      <select formControlName="category">
-        <option value="">-Select-</option>
-        <option value="Feedback">Feedback</option>
-        <option value="Bug">Bug Report</option>
-        <option value="Feature">Feature Request</option>
-      </select>
-    </label>
-  
-    <label>
-      Message
-      <textarea formControlName="message" rows="4" placeholder="Write your thoughts..."></textarea>
-    </label>
-  
-    <label>
-      Optional File
-      <input type="file" (change)="onFileChange($event)" />
-    </label>
-  
-    <button type="submit">Submit</button>
-  </form>
-   
+<!-- <form [formGroup]="suggestionForm" (ngSubmit)="onSubmit()" class="form-container"> -->
+<form [formGroup]="suggestionForm" class="form-container">
+  <h2>Send Us Your Suggestion</h2>
+
+  <label>
+    Name
+    <input formControlName="name" type="text" placeholder="Your name" />
+  </label>
+
+  <label>
+    Email
+    <input formControlName="email" type="email" placeholder="you@example.com" />
+  </label>
+
+  <label>
+    Category
+    <select formControlName="category">
+      <option value="">-Select-</option>
+      <option value="Feedback">Feedback</option>
+      <option value="Bug">Bug Report</option>
+      <option value="Feature">Feature Request</option>
+    </select>
+  </label>
+
+  <label>
+    Message
+    <textarea formControlName="message" rows="4" placeholder="Write your thoughts..."></textarea>
+  </label>
+
+  <label>
+    Optional File
+    <input type="file" (change)="onFileChange($event)" />
+  </label>
+  <div class="buttons">
+    <button type="submit" class="wtsBtn" (click)="sendWhatsApp()"><i class="fa fa-whatsapp wtsIcon"></i>Submit</button>
+    <button type="submit" class="emailBtn" (click)="sendEmail()"><i
+        class="fa-solid fa-envelope emailIcons"></i>Submit</button>
+  </div>
+</form>

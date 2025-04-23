@@ -1,6 +1,18 @@
 /* suggestion-form.component.css */
-form,h2,label{
+form,h2,label,i{
   background: #222;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+  gap:30px;
+  background: #222;
+}
+.wtsBtn{
+  background-color: rgb(22, 77, 22);
+}
+.emailBtn{
+  background-color: rgb(27, 27, 88);
 }
 
 .form-container {
@@ -38,8 +50,15 @@ form,h2,label{
     border: none;
     cursor: pointer;
   }
-  
-  button:hover {
-    background-color: #0056b3;
+  .wtsIcon{
+    padding-right: 5px;
+    background: rgb(22, 77, 22);
   }
+  .emailIcons{
+    padding-right: 5px;
+    background: rgb(27, 27, 88);
+  }
+  // button:hover {
+  //   background-color: #0056b3;
+  // }
   
