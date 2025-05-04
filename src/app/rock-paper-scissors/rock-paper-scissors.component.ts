@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer,SafeHtml } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-rock-paper-scissors',
@@ -9,7 +10,7 @@ import { DomSanitizer,SafeHtml } from '@angular/platform-browser';
 export class RockPaperScissorsComponent implements OnInit {
   playerIcon: SafeHtml = '';
   compIcon: SafeHtml = '';
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer,private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -24,6 +25,8 @@ export class RockPaperScissorsComponent implements OnInit {
   displayFlag = false;
   isTransformed = false;
   showPopup = false;
+  activeBtnPlayer: string = '';
+  activeBtnComp: string = '';
   // ✅ Scorecard
   wins = 0;
   losses = 0;
@@ -34,6 +37,8 @@ export class RockPaperScissorsComponent implements OnInit {
       alert('Choose from Player');
       return;
     }
+    this.activeBtnComp = "";
+    this.activeBtnPlayer = userChoice;
     this.displayFlag = false;
     this.isTransformed = true;
     this.result = "";
@@ -42,6 +47,7 @@ export class RockPaperScissorsComponent implements OnInit {
     this.displayFlag = true;
     this.userChoice = userChoice;
     this.computerChoice = this.choices[Math.floor(Math.random() * 3)];
+    this.activeBtnComp = this.computerChoice;
     this.result = this.getResult(this.userChoice, this.computerChoice);
     const iconMap: { [key: string]: string } = {  // ✅ Explicitly define type
       Rock: '<i class="fas fa-hand-rock fa-3x"></i>',
@@ -100,6 +106,11 @@ export class RockPaperScissorsComponent implements OnInit {
     this.playerIcon = "";
     this.compIcon = "";
     this.displayFlag = false;
+    this.activeBtnPlayer = '';
+    this.activeBtnComp = '';
     this.wins = this.losses = this.ties = 0;
+  }
+  back():void{
+    this.router.navigate(['/header']);
   }
 }

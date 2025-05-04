@@ -8,16 +8,28 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-.plyComp{
+.plyComp {
   display: flex;
   justify-content: center;
   gap: 90px;
 }
+
+.btn {
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2ss ease;
+}
+
+.clicked {
+  border: 2px solid white;
+}
+
 
 .popup {
   position: fixed;
@@ -42,33 +54,33 @@
   box-shadow: 0 0 10px #000;
 }
 
-.popupResult{
+.popupResult {
   padding-bottom: 10px;
 }
 
-.playAgain{
-  color:#0F3B1E;
+.playAgain {
+  color: #0F3B1E;
   background-color: #FFA500;
   padding: 10px;
   border-radius: 10px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
-.resultDisplay{
-color: white;
-text-align: center;
-padding: 20px 0px 0px 0px;
-font-weight: bold;
-font-size: 25px 0px 0px 0px;
+.resultDisplay {
+  color: white;
+  text-align: center;
+  padding: 20px 0px 0px 0px;
+  font-weight: bold;
+  font-size: 25px 0px 0px 0px;
 }
 
-.plyCompNew{
+.plyCompNew {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.alter{
+.alter {
   color: #FFA500;
   font-size: 8px;
 }
@@ -88,6 +100,7 @@ font-size: 25px 0px 0px 0px;
 .title {
   padding: 0px 0px 20px 0px;
 }
+
 .titleNew {
   padding: 0px 0px 20px 0px;
 }
@@ -176,11 +189,20 @@ td {
   font-size: 20px;
   width: 150px;
 }
-.reset{
+
+.flxClass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reset,
+.back {
   padding-top: 20px;
 }
 
-.resetButton {
+.resetButton,
+.backButton {
   align-items: center;
   background-color: black;
   color: white;
@@ -236,14 +258,11 @@ td {
   right: 0;
 }
 
-.table{
+.table {
   width: 300px;
   text-align: center;
   margin: auto;
   padding: 40px 0px 0px 0px;
 }
-
-
-
 // #0F3B1E
 // #FFA500

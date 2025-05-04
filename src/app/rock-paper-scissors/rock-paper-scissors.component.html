@@ -6,13 +6,13 @@
     <h3 class="titleNew">Player Choice</h3>
   <div class="buttons triangle-container">
     <div>
-      <button (click)="play('Rock')" class="rps-img top-img">
+      <button (click)="play('Rock')" [class.clicked]="activeBtnPlayer === 'Rock'" class="btn rps-img top-img">
         <i class="far fa-hand-rock"></i>
       </button>
-      <button (click)="play('Paper')" class="rps-img bottom-left-img">
+      <button (click)="play('Paper')" [class.clicked]="activeBtnPlayer === 'Paper'" class="btn rps-img bottom-left-img">
         <i class="far fa-hand-paper"></i>
       </button>
-      <button (click)="play('Scissors')" class="rps-img bottom-right-img">
+      <button (click)="play('Scissors')" [class.clicked]="activeBtnPlayer === 'Scissors'" class="btn rps-img bottom-right-img">
         <i class="far fa-hand-scissors"></i>
       </button>
     </div>
@@ -21,13 +21,13 @@
   <div class="plyCompNew">
     <h3 class="titleNew">Computer Choice</h3>
   <div [class.myDiv]="isTransformed" class="buttons triangle-container">
-    <button (click)="play('comp')" class="rps-img top-img">
+    <button (click)="play('comp')" [class.clicked]="activeBtnComp === 'Rock'" class="rps-img top-img">
       <i class="far fa-hand-rock"></i>
     </button>
-    <button (click)="play('comp')" class="rps-img bottom-left-img">
+    <button (click)="play('comp')" [class.clicked]="activeBtnComp === 'Paper'" class="rps-img bottom-left-img">
       <i class="far fa-hand-paper"></i>
     </button>
-    <button (click)="play('comp')" class="rps-img bottom-right-img">
+    <button (click)="play('comp')" [class.clicked]="activeBtnComp === 'Scissors'" class="rps-img bottom-right-img">
       <i class="far fa-hand-scissors"></i>
     </button>
   </div>
@@ -69,7 +69,13 @@
         <p>Losses: {{ losses }}</p>
         <p>Ties: {{ ties }}</p>
     </div> -->
-    <div class="reset">
-      <button class="resetButton" (click)="resetScore()">Reset Score</button>
+    <div class="flxClass">
+      <div class="back">
+        <button class="backButton" (click)="back()">Back</button>
+      </div>
+      <div class="reset">
+        <button class="resetButton" (click)="resetScore()">Restart Game</button>
+      </div>
     </div>
+    
 </div>
