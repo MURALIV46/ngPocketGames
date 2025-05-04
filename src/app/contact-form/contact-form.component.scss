@@ -1,4 +1,8 @@
 /* suggestion-form.component.css */
+:host {
+  display: block;
+  background-color: #143240;
+}
 form,h2,label,i{
   background: #222;
 }

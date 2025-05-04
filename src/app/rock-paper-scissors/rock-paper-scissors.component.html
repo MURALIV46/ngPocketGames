@@ -1,0 +1,75 @@
+<div class="game">
+<h1 class="title">Rock Paper Scissors</h1>
+
+<div class="plyComp">
+  <div class="plyCompNew">
+    <h3 class="titleNew">Player Choice</h3>
+  <div class="buttons triangle-container">
+    <div>
+      <button (click)="play('Rock')" class="rps-img top-img">
+        <i class="far fa-hand-rock"></i>
+      </button>
+      <button (click)="play('Paper')" class="rps-img bottom-left-img">
+        <i class="far fa-hand-paper"></i>
+      </button>
+      <button (click)="play('Scissors')" class="rps-img bottom-right-img">
+        <i class="far fa-hand-scissors"></i>
+      </button>
+    </div>
+  </div>
+  </div>
+  <div class="plyCompNew">
+    <h3 class="titleNew">Computer Choice</h3>
+  <div [class.myDiv]="isTransformed" class="buttons triangle-container">
+    <button (click)="play('comp')" class="rps-img top-img">
+      <i class="far fa-hand-rock"></i>
+    </button>
+    <button (click)="play('comp')" class="rps-img bottom-left-img">
+      <i class="far fa-hand-paper"></i>
+    </button>
+    <button (click)="play('comp')" class="rps-img bottom-right-img">
+      <i class="far fa-hand-scissors"></i>
+    </button>
+  </div>
+  </div>
+</div>
+
+  <div class="result" *ngIf="displayFlag">
+    <p [innerHTML]="playerIcon" class="alter"></p>
+    <p>{{ vs }}</p>
+    <p [innerHTML]="compIcon" class="alter"></p>
+  </div>
+
+  <div class="resultDisplay">
+    {{result}}
+  </div>
+
+  <table border="1" class="table">
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Computer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ wins }}/10</td>
+        <td>{{ losses }}/10</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="popup" *ngIf="showPopup">
+    <div class="popup-content">
+      <h2 class="popupResult">{{ result }}</h2>
+      <button class="playAgain" (click)="closePopup()">Play Again</button>
+    </div>
+  </div>  
+  <!-- <div class="scorecard">
+        <p>Wins: {{ wins }}</p>
+        <p>Losses: {{ losses }}</p>
+        <p>Ties: {{ ties }}</p>
+    </div> -->
+    <div class="reset">
+      <button class="resetButton" (click)="resetScore()">Reset Score</button>
+    </div>
+</div>

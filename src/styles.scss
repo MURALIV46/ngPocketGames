@@ -1,6 +1,27 @@
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background:#143240;
-  }/* You can add global styles to this file, and also import other style files */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+html, body {
+  overflow-x: hidden;     /* 🚫 disables scroll */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure router outlet or wrapper fills the screen */
+app-root, .app-wrapper {
+  display: block;
+  height: 100%;
+}
+body.page-header {
+  background-color: #143240;
+}
+
+body.page-rps {
+  background-color: #0F3B1E;
+}
+

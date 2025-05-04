@@ -4,6 +4,11 @@
     box-sizing: border-box;
     background-color: transparent;
   }
+  :host {
+    display: block;
+    background-color: #143240;
+    color: white;
+  }
 .container {
     // position: absolute;
     top: 50px;

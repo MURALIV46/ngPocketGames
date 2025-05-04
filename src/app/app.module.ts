@@ -8,6 +8,8 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AboutPgComponent } from './about-pg/about-pg.component';
+import { RockPaperScissorsComponent } from './rock-paper-scissors/rock-paper-scissors.component';
+import { TrailComponent } from './trail/trail.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { AboutPgComponent } from './about-pg/about-pg.component';
     HeaderComponent,
     MainContentComponent,
     ContactFormComponent,
-    AboutPgComponent
+    AboutPgComponent,
+    RockPaperScissorsComponent,
+    TrailComponent
   ],
   imports: [
     BrowserModule,
